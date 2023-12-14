@@ -44,9 +44,7 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
-app.get("/", (req, res) => {
-  res.json("hello");
-});
+
 app.post("/register", async (req, res) => {
   const { userName, email, password } = req.body;
   const salt = await bcrypt.genSalt(10);
