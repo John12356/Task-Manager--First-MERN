@@ -1,0 +1,64 @@
+.not-div {
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  color: var(--text);
+  padding: 5px 15px;
+  position: absolute;
+  top: 60px;
+  /* width: 320px; */
+  width: 92%;
+  height: 55%;
+  z-index: 2;
+  overflow-y: scroll;
+  border-bottom: 10px solid var(--bg);
+}
+.not-div::-webkit-scrollbar {
+  display: none;
+}
+.not-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+  position: sticky;
+  top: -10px;
+  border: 10px solid var(--bg);
+  background-color: var(--bg);
+}
+.not-header button {
+  border: none;
+  outline: none;
+  margin-left: auto;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: inherit;
+  color: var(--text);
+}
+.not-items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.not-each-item h4 {
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 14px;
+  /* display: inline; */
+  white-space: nowrap;
+}
+.not-each-item {
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  background-color: var(--prof);
+  padding: 5px;
+  border-radius: 5px;
+  justify-content: space-between;
+}
+#no-tasks {
+  text-align: center;
+}

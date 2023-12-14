@@ -1,0 +1,35 @@
+.dialog-div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg);
+  padding: 5px 20px;
+  margin-top: 5%;
+  border-radius: 5px;
+  border: 1px solid var(--text);
+  /* display: none; */
+}
+.dialog-text {
+  text-transform: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+.dialog-btn {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.dialog-bt {
+  border: 0;
+  outline: 0;
+  margin: 0;
+  color: var(--text);
+  background: rgb(231, 93, 93);
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+}

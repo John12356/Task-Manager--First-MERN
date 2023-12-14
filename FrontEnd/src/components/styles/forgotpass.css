@@ -1,0 +1,57 @@
+/* :root {
+  --nav : #86A789;
+  --prof: #B2C8BA;
+  --bg: #EBF3E8;
+  --grey: #D2E3C8;
+} */
+.forgot-con {
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--grey);
+  padding: 20px;
+  border-radius: 20px;
+  width: 300px;
+  justify-content: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+}
+.forgot-con h3 {
+  text-align: center;
+  text-transform: capitalize;
+  pointer-events: none;
+}
+.forgot-con label {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.forgot-con input {
+  border: 0;
+  margin: 0;
+  outline: 0;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+  height: 40px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+.forgot-con button {
+  height: 40px;
+  text-transform: uppercase;
+  background-color: var(--nav);
+  border: 0;
+  margin: 0;
+  outline: 0;
+  border-radius: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+}
+.forgot-con button:hover {
+  border-radius: 5px;
+  font-weight: 500;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+}
