@@ -20,7 +20,7 @@ app.use([
   cors({
     origin: process.env.FRONTEND_DOMAIN,
     credentials: true,
-    methods: ["GET", "PUT", "POST", "PATCH"],
+    methods: ["GET", "PUT", "POST", "PATCH", "DELETE"],
   }),
   express.json(),
   express.urlencoded({ extended: true }),
