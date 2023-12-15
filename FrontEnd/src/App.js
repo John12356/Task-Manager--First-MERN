@@ -64,7 +64,6 @@ function App() {
             element={<Task toast={toast} tasks={tasks} setTasks={setTasks} />}
           />
         </Route>
-        <Route path="*" element={<h1>404 Page not found</h1>} />
       </Routes>
     </BrowserRouter>
   );
