@@ -1,7 +1,5 @@
 const mongoose = require("mongoose");
-const authDatabase = mongoose.createConnection(
-  "mongodb+srv://jhonmoorthi85131:marakatha123@cluster0.stsfpwg.mongodb.net/?retryWrites=true&w=majority"
-);
+const authDatabase = mongoose.createConnection(process.env.MONGO_URL);
 const schema = new mongoose.Schema({
   userName: {
     type: String,

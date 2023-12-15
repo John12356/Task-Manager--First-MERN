@@ -1,7 +1,5 @@
 const mongoose = require("mongoose");
-const dataDatabase = mongoose.createConnection(
-  "mongodb+srv://jhonmoorthi85131:marakatha123@cluster0.stsfpwg.mongodb.net/?retryWrites=true&w=majority"
-);
+const dataDatabase = mongoose.createConnection(process.env.MONGO_URL);
 const todoSchema = new mongoose.Schema(
   {
     todoId: { type: String },
