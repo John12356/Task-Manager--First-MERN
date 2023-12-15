@@ -68,7 +68,7 @@ Edit and organize notes with rich text formatting and multimedia attachments.
 
 Before you begin, ensure you have met the following requirements:
 
-- [Node.js](https://nodejs.org/) (v12.18.3 or higher)
+- [Node.js](https://nodejs.org/) (v16 or higher)
 - [npm](https://www.npmjs.com/) (comes with Node.js; npm v6.14.6 or higher recommended)
 - [MongoDB](https://www.mongodb.com/) (v4.0 or higher)
 - [Your preferred web browser](https://www.google.com/chrome/)
