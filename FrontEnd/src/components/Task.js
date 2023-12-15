@@ -19,7 +19,7 @@ const Task = ({ toast, tasks, setTasks }) => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
     axios
-      .get("http://localhost:8080/task/getTask")
+      .get(`${process.env.REACT_APP_API_URL}/task/getTask`)
       .then((res) => {
         let temp = res.data.filter((obj) => obj.done);
         setTasks(res.data);
@@ -53,7 +53,7 @@ const Task = ({ toast, tasks, setTasks }) => {
       done: false,
     };
     axios
-      .post("http://localhost:8080/task/postTask", newTask)
+      .post(`${process.env.REACT_APP_API_URL}/task/postTask`, newTask)
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
 
@@ -68,7 +68,9 @@ const Task = ({ toast, tasks, setTasks }) => {
     );
     setTasks(updatedTasks);
     axios
-      .patch(`http://localhost:8080/task/updateTask/${id}`, { done: true })
+      .patch(`${process.env.REACT_APP_API_URL}/task/updateTask/${id}`, {
+        done: true,
+      })
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
 
@@ -78,7 +80,7 @@ const Task = ({ toast, tasks, setTasks }) => {
 
   const removeTask = (id) => {
     axios
-      .delete(`http://localhost:8080/task/deleteTask/${id}`)
+      .delete(`${process.env.REACT_APP_API_URL}/task/deleteTask/${id}`)
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
 

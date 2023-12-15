@@ -11,11 +11,11 @@ export default function Mainpage({ toast, signIn, user }) {
   const navigate = useNavigate();
 
   const googleAuth = () => {
-    window.open("http://localhost:8080/google", "_self");
+    window.open(`${process.env.REACT_APP_API_URL}/google`, "_self");
   };
 
   const fbAuth = () => {
-    window.open("http://localhost:8080/facebook", "_self");
+    window.open(`${process.env.REACT_APP_API_URL}/facebook`, "_self");
   };
   const openForgotPass = () => {
     navigate("/forgotpass");
@@ -42,7 +42,7 @@ export default function Mainpage({ toast, signIn, user }) {
       return;
     }
     axios
-      .post("http://localhost:8080/login", userLogin)
+      .post(`${process.env.REACT_APP_API_URL}/login`, userLogin)
       .then((result) => {
         console.log(result);
         if (result.data.success) {
@@ -63,7 +63,7 @@ export default function Mainpage({ toast, signIn, user }) {
   const handleRegister = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8080/register", users)
+      .post(`${process.env.REACT_APP_API_URL}/register`, users)
       .then((result) => {
         console.log(result);
         if (result.data !== "Already Registerd") {

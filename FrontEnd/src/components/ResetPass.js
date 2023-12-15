@@ -7,11 +7,12 @@ const ResetPass = ({ toast }) => {
   const { id, token } = useParams();
   const [newPassword, setNewPassword] = useState("");
   const navigate = useNavigate();
+  axios.defaults.withCredentials = true;
 
   function resetPass(e) {
     e.preventDefault();
     axios
-      .post(`http://localhost:8080/resetPassword/${id}/${token}`, {
+      .post(`${process.env.REACT_APP_API_URL}/resetPassword/${id}/${token}`, {
         newPassword,
       })
       .then((res) => {

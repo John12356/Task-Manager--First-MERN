@@ -31,7 +31,7 @@ const Navbar = () => {
   }
   function logOut() {
     axios
-      .get("http://localhost:8080/logout")
+      .get(`${process.env.REACT_APP_API_URL}/logout`)
       .then((res) => {
         console.log(res);
         navigate("/");

@@ -6,7 +6,7 @@ import axios from "axios";
 const MainTodo = ({ todo, setTodo }) => {
   useEffect(() => {
     axios
-      .get("http://localhost:8080/todo/getTodo")
+      .get(`${process.env.REACT_APP_API_URL}/todo/getTodo`)
       .then((res) => {
         setTodo(res.data);
       })

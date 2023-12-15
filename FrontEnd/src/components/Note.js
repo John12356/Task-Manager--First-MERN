@@ -28,7 +28,9 @@ const Note = (props) => {
   const areYouSure = (yes) => {
     if (yes) {
       axios
-        .delete(`http://localhost:8080/note/deleteNote/${idRef.current}`)
+        .delete(
+          `${process.env.REACT_APP_API_URL}/note/deleteNote/${idRef.current}`
+        )
         .catch((err) => console.log(err));
       setNotes(notes.filter((note) => idRef.current !== note.id));
       setDialog({ isLoading: false });
@@ -44,7 +46,7 @@ const Note = (props) => {
     });
     let found;
     await axios
-      .get("http://localhost:8080/note/getNote")
+      .get(`${process.env.REACT_APP_API_URL}/note/getNote`)
       .then((res) => {
         found = res.data.find((obj) => {
           return obj.id === id;
@@ -54,7 +56,7 @@ const Note = (props) => {
       .catch((err) => console.log(err));
     if (!found) {
       await axios
-        .post("http://localhost:8080/note/postNote", note)
+        .post(`${process.env.REACT_APP_API_URL}/note/postNote`, note)
         .then((res) => {
           console.log(res);
         })
@@ -64,7 +66,7 @@ const Note = (props) => {
   };
 
   const update = (id) => {
-    axios.patch(`http://localhost:8080/note/updateNote/${id}`, {
+    axios.patch(`${process.env.REACT_APP_API_URL}/note/updateNote/${id}`, {
       newText: text,
     });
     toast.success("Saved Successfully");

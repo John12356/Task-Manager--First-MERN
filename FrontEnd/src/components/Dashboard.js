@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-// import { BiSearchAlt2 } from "react-icons/bi";
 import { AiOutlineArrowsAlt } from "react-icons/ai";
 import MainNote from "./DashBoardCom/MainNote";
 import MainTask from "./DashBoardCom/MainTask";
@@ -28,10 +27,6 @@ const Dashboard = ({ notes, setNotes, tasks, setTasks, todo, setTodo }) => {
     <div className="home-body-conatiner" data-aos="zoom-in">
       <header id="dash-header" className="search-bar">
         <h1>Dashboard</h1>
-        {/* <input type="text" placeholder="Search" />
-        <button id="search-bt">
-          <BiSearchAlt2 size={22} />
-        </button> */}
       </header>
       <main className="body-content ">
         <div className="notes" data-aos="fade-up-right">

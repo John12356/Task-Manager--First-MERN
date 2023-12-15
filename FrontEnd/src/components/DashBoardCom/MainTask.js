@@ -5,7 +5,7 @@ import axios from "axios";
 const MainTask = ({ tasks, setTasks }) => {
   useEffect(() => {
     axios
-      .get("http://localhost:8080/task/getTask")
+      .get(`${process.env.REACT_APP_API_URL}/task/getTask`)
       .then((res) => {
         setTasks(res.data);
       })

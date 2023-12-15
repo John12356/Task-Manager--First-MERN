@@ -10,11 +10,12 @@ axios.defaults.withCredentials = true;
 const Notes = ({ notes, setNotes, toast }) => {
   const [noteTitle, setNoteTitle] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
+
   useEffect(() => {
     Aos.init({ duration: 1000 });
     console.log("3");
     axios
-      .get("http://localhost:8080/note/getNote")
+      .get(`${process.env.REACT_APP_API_URL}/note/getNote`)
       .then((res) => {
         setNotes(res.data);
       })

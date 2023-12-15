@@ -20,7 +20,7 @@ const Todo = ({ toast, todo, setTodo }) => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
     axios
-      .get("http://localhost:8080/todo/getTodo")
+      .get(`${process.env.REACT_APP_API_URL}/todo/getTodo`)
       .then((res) => {
         setTodo(res.data);
       })
@@ -42,7 +42,7 @@ const Todo = ({ toast, todo, setTodo }) => {
       return [...current, newTodoItem];
     });
     await axios
-      .post("http://localhost:8080/todo/postTodo", newTodoItem)
+      .post(`${process.env.REACT_APP_API_URL}/todo/postTodo`, newTodoItem)
       .then((res) => {
         console.log(res);
       })
@@ -61,7 +61,7 @@ const Todo = ({ toast, todo, setTodo }) => {
       });
     });
     axios
-      .patch(`http://localhost:8080/todo/updateTodo/${todoId}`, {
+      .patch(`${process.env.REACT_APP_API_URL}/todo/updateTodo/${todoId}`, {
         status: status,
       })
       .then((res) => {
@@ -72,7 +72,7 @@ const Todo = ({ toast, todo, setTodo }) => {
   }
 
   function deleteTodo(todoId) {
-    axios.delete(`http://localhost:8080/todo/deleteTodo/${todoId}`);
+    axios.delete(`${process.env.REACT_APP_API_URL}/todo/deleteTodo/${todoId}`);
     setTodo((current) => {
       return current.filter((todo) => todo.todoId !== todoId);
     });
