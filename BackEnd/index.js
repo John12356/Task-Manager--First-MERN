@@ -1,4 +1,5 @@
 require("./passport");
+require("dotenv").config();
 const express = require("express");
 const nodemailer = require("nodemailer");
 const jwt = require("jsonwebtoken");
@@ -17,7 +18,7 @@ const PORT = 8080;
 const app = express();
 app.use([
   cors({
-    origin: "https://task-manager-first-mern-xmir-ruthras-projects.vercel.app/",
+    origin: process.env.FRONTEND_DOMAIN,
     credentials: true,
     methods: ["GET", "PUT", "PATCH", "PUT", "DELETE"],
   }),

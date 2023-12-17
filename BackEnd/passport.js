@@ -1,4 +1,5 @@
 const passport = require("passport");
+require("dotenv").config();
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const FacebookStrategy = require("passport-facebook").Strategy;
 const LocalStrategy = require("passport-local").Strategy;
@@ -8,13 +9,13 @@ const bcrypt = require("bcrypt");
 const googleCredentials = {
   clientID: process.env.GOOGLE_CLIENT_ID,
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-  callbackURL: "https://task-manager-first-mern.vercel.app/google/callback",
+  callbackURL: "http://localhost:8080/google/callback",
 };
 
 const fbCredentials = {
   clientID: process.env.FACEBOOK_CLIENT_ID,
   clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-  callbackURL: "https://task-manager-first-mern.vercel.app/facebook/callback",
+  callbackURL: "http://localhost:8080/facebook/callback",
   profileFields: ["id", "email", "displayName", "picture.type(large)"],
 };
 
