@@ -1,4 +1,3 @@
-require("dotenv").config();
 require("./passport");
 const express = require("express");
 const nodemailer = require("nodemailer");
