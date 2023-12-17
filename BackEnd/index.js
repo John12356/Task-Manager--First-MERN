@@ -17,7 +17,7 @@ const PORT = 8080;
 const app = express();
 app.use([
   cors({
-    origin: "https://task-manager-first-mern-xmir-ruthras-projects.vercel.app",
+    origin: "https://task-manager-first-mern-xmir.vercel.app/",
     credentials: true,
     methods: "GET,PUT,PATCH,PUT,DELETE",
   }),
