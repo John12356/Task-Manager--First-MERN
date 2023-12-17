@@ -185,3 +185,5 @@ app.use("/task", [authenticator, TaskRoutes]);
 app.listen(PORT, () => {
   console.log(`Server Running On Port : ${PORT} `);
 });
+
+module.exports = app;
