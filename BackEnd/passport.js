@@ -8,13 +8,13 @@ const bcrypt = require("bcrypt");
 const googleCredentials = {
   clientID: process.env.GOOGLE_CLIENT_ID,
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-  callbackURL: "https://task-manager-first-mern-ruthras-projects.vercel.app/google/callback",
+  callbackURL: "https://task-manager-first-mern.vercel.app/google/callback",
 };
 
 const fbCredentials = {
   clientID: process.env.FACEBOOK_CLIENT_ID,
   clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-  callbackURL: "https://task-manager-first-mern-ruthras-projects.vercel.app/facebook/callback",
+  callbackURL: "https://task-manager-first-mern.vercel.app/facebook/callback",
   profileFields: ["id", "email", "displayName", "picture.type(large)"],
 };
 
