@@ -82,7 +82,7 @@ node --version
 npm --version
 ```
 ## How To Run
-Create the file `mern/server/config.env` with your Atlas URI and the server port:
+Create the file `BackEnd/config.env` with your Atlas URI and the server port:
 
 **FrontEnd**
 ```
